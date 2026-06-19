@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ivan Churba | Portfolio</title>
+    <meta name="description" content="Portfolio de Ivan Churba: edicion, generacion IA, video, imagen y contenido audiovisual.">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body data-page="home">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Inicio">
+        <span>Ivan Churba</span>
+        <small>Portfolio audiovisual</small>
+      </a>
+      <nav class="top-nav" aria-label="Navegacion principal">
+        <a href="edicion-generacion-ia.html">Video + IA</a>
+        <a href="generacion-imagenes-ia.html">Imagen IA</a>
+        <a href="generacion-video-ia.html">Video IA</a>
+      </nav>
+      <a class="mail-link" href="mailto:ivan.churba@gmail.com">Contacto</a>
+    </header>
+
+    <main>
+      <section class="landing">
+        <div class="landing-copy">
+          <p class="eyebrow">Portfolio audiovisual</p>
+          <h1>Ivan Churba</h1>
+          <p class="lead">Generacion IA, edicion y piezas visuales para marcas.</p>
+          <div class="landing-actions">
+            <a class="button primary" href="#categorias">Ver categorias</a>
+            <a class="button secondary" href="mailto:ivan.churba@gmail.com">ivan.churba@gmail.com</a>
+          </div>
+        </div>
+        <section class="reel-card" aria-label="Reel">
+          <div class="reel-placeholder">
+            <span>Reel</span>
+            <strong>Proximamente</strong>
+          </div>
+          <p>Un video demo con un pantallazo rapido de proyectos, estilos y formatos.</p>
+        </section>
+      </section>
+
+      <section class="section-band" id="categorias">
+        <div class="section-intro">
+          <p class="eyebrow">Categorias principales</p>
+          <h2>Trabajos</h2>
+        </div>
+        <div class="section-cards" id="homeSections"></div>
+      </section>
+    </main>
+
+    <dialog class="viewer" id="viewer">
+      <button class="viewer-close" data-close-viewer aria-label="Cerrar">Cerrar</button>
+      <div class="viewer-body" id="viewerBody"></div>
+    </dialog>
+
+    <script src="data/site-data.js?v=20260618-youtube-fix-2"></script>
+    <script src="app.js?v=20260618-youtube-fix-2"></script>
+  </body>
+</html>

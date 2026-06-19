@@ -1,0 +1,26 @@
+# Local originals and backups
+backups/
+A - Edicion/
+A - Generacion/
+A - Generacion y Edicion/
+Proyectos a Cargar/
+PRUEBA/
+
+# System and temporary files
+.DS_Store
+**/.DS_Store
+smbdelete*
+*.tmp
+
+# Local video compression experiments
+portfolio-web/assets/media/optimized/01-edicion-video-generacion-ia/
+portfolio-web/assets/media/optimized/03-generacion-video-ia/
+portfolio-web/assets/media/optimized/04-edicion-video/
+portfolio-web/assets/media/optimized/02-generacion-imagenes-ia/coppel-mexico/jpg compress/
+portfolio-web/assets/media/images/storyboard-prosegur/
+portfolio-web/assets/media/para-subir/
+portfolio-web/assets/previews/a-generacion-coppel-mexico-*
+portfolio-web/assets/previews/a-generacion-storyboard-prosegur-*
+portfolio-web/assets/previews/coppel-test/
+portfolio-web/assets/previews/coppel-ql/
+portfolio-web/assets/thumbs/
