@@ -929,13 +929,14 @@ window.PORTFOLIO_DATA = {
             "title": "Cofler Gold",
             "type": "video",
             "preview": "assets/posters/new-projects/cofler-gold.jpg",
-            "original": "",
-            "full": "",
-            "extension": "MP4",
+            "original": "https://youtu.be/IcKBIO5QPwE",
+            "full": "https://youtu.be/IcKBIO5QPwE",
+            "extension": "YouTube",
             "sizeMb": 0,
-            "provider": "pending-youtube",
-            "youtubeUrl": "",
-            "embedUrl": ""
+            "provider": "youtube",
+            "youtubeUrl": "https://youtu.be/IcKBIO5QPwE",
+            "embedUrl": "https://www.youtube.com/embed/IcKBIO5QPwE",
+            "youtubeId": "IcKBIO5QPwE"
           },
           "pieces": [
             {
@@ -943,74 +944,65 @@ window.PORTFOLIO_DATA = {
               "title": "Cofler Gold",
               "type": "video",
               "preview": "assets/posters/new-projects/cofler-gold.jpg",
-              "original": "",
-              "full": "",
-              "extension": "MP4",
+              "original": "https://youtu.be/IcKBIO5QPwE",
+              "full": "https://youtu.be/IcKBIO5QPwE",
+              "extension": "YouTube",
               "sizeMb": 0,
-              "provider": "pending-youtube",
-              "youtubeUrl": "",
-              "embedUrl": ""
+              "provider": "youtube",
+              "youtubeUrl": "https://youtu.be/IcKBIO5QPwE",
+              "embedUrl": "https://www.youtube.com/embed/IcKBIO5QPwE",
+              "youtubeId": "IcKBIO5QPwE"
             }
           ]
         },
         {
           "title": "Poxipol",
-          "description": "Serie de piezas generadas para distintas versiones de campaña, agrupadas por locación y variante visual.",
+          "description": "Serie de piezas generadas para campaña, agrupadas por variantes visuales.",
           "kind": "video",
           "galleryHref": "",
-          "mainId": "new-poxipol-buenos-aires",
+          "mainId": "new-poxipol-rosario",
           "main": {
-            "id": "new-poxipol-buenos-aires",
-            "title": "Buenos Aires",
+            "id": "new-poxipol-rosario",
+            "title": "Rosario",
             "type": "video",
-            "preview": "assets/posters/new-projects/poxipol-buenos-aires.jpg",
-            "original": "",
-            "full": "",
-            "extension": "MP4",
+            "preview": "assets/posters/new-projects/poxipol-rosario.jpg",
+            "original": "https://youtu.be/22Ba2IU25DQ",
+            "full": "https://youtu.be/22Ba2IU25DQ",
+            "extension": "YouTube",
             "sizeMb": 0,
-            "provider": "pending-youtube",
-            "youtubeUrl": "",
-            "embedUrl": ""
+            "provider": "youtube",
+            "youtubeUrl": "https://youtu.be/22Ba2IU25DQ",
+            "embedUrl": "https://www.youtube.com/embed/22Ba2IU25DQ",
+            "youtubeId": "22Ba2IU25DQ"
           },
           "pieces": [
-            {
-              "id": "new-poxipol-buenos-aires",
-              "title": "Buenos Aires",
-              "type": "video",
-              "preview": "assets/posters/new-projects/poxipol-buenos-aires.jpg",
-              "original": "",
-              "full": "",
-              "extension": "MP4",
-              "sizeMb": 0,
-              "provider": "pending-youtube",
-              "youtubeUrl": "",
-              "embedUrl": ""
-            },
             {
               "id": "new-poxipol-rosario",
               "title": "Rosario",
               "type": "video",
               "preview": "assets/posters/new-projects/poxipol-rosario.jpg",
-              "original": "",
-              "full": "",
-              "extension": "MP4",
+              "original": "https://youtu.be/22Ba2IU25DQ",
+              "full": "https://youtu.be/22Ba2IU25DQ",
+              "extension": "YouTube",
               "sizeMb": 0,
-              "provider": "pending-youtube",
-              "youtubeUrl": "",
-              "embedUrl": ""
+              "provider": "youtube",
+              "youtubeUrl": "https://youtu.be/22Ba2IU25DQ",
+              "embedUrl": "https://www.youtube.com/embed/22Ba2IU25DQ",
+              "youtubeId": "22Ba2IU25DQ"
             },
             {
               "id": "new-poxipol-obelisco",
               "title": "Obelisco",
               "type": "video",
               "preview": "assets/posters/new-projects/poxipol-obelisco.jpg",
-              "original": "",
-              "full": "",
-              "extension": "MP4",
+              "original": "https://youtu.be/flEELFWE8I4",
+              "full": "https://youtu.be/flEELFWE8I4",
+              "extension": "YouTube",
               "sizeMb": 0,
-              "provider": "pending-youtube",
-              "youtubeUrl": "",
-              "embedUrl": ""
+              "provider": "youtube",
+              "youtubeUrl": "https://youtu.be/flEELFWE8I4",
+              "embedUrl": "https://www.youtube.com/embed/flEELFWE8I4",
+              "youtubeId": "flEELFWE8I4"
             }
           ]
         },
@@ -1025,13 +1017,14 @@ window.PORTFOLIO_DATA = {
             "title": "Cereal Mix",
             "type": "video",
             "preview": "assets/posters/new-projects/hogarenas.jpg",
-            "original": "",
-            "full": "",
-            "extension": "MP4",
+            "original": "https://youtu.be/QAQPJ0wSoJ4",
+            "full": "https://youtu.be/QAQPJ0wSoJ4",
+            "extension": "YouTube",
             "sizeMb": 0,
-            "provider": "pending-youtube",
-            "youtubeUrl": "",
-            "embedUrl": ""
+            "provider": "youtube",
+            "youtubeUrl": "https://youtu.be/QAQPJ0wSoJ4",
+            "embedUrl": "https://www.youtube.com/embed/QAQPJ0wSoJ4",
+            "youtubeId": "QAQPJ0wSoJ4"
           },
           "pieces": [
             {
@@ -1039,13 +1032,14 @@ window.PORTFOLIO_DATA = {
               "title": "Cereal Mix",
               "type": "video",
               "preview": "assets/posters/new-projects/hogarenas.jpg",
-              "original": "",
-              "full": "",
-              "extension": "MP4",
+              "original": "https://youtu.be/QAQPJ0wSoJ4",
+              "full": "https://youtu.be/QAQPJ0wSoJ4",
+              "extension": "YouTube",
               "sizeMb": 0,
-              "provider": "pending-youtube",
-              "youtubeUrl": "",
-              "embedUrl": ""
+              "provider": "youtube",
+              "youtubeUrl": "https://youtu.be/QAQPJ0wSoJ4",
+              "embedUrl": "https://www.youtube.com/embed/QAQPJ0wSoJ4",
+              "youtubeId": "QAQPJ0wSoJ4"
             }
           ]
         },
@@ -1060,13 +1054,14 @@ window.PORTFOLIO_DATA = {
             "title": "Hogar Gamer",
             "type": "video",
             "preview": "assets/posters/new-projects/zurich-hogar-gamer.jpg",
-            "original": "",
-            "full": "",
-            "extension": "MOV",
+            "original": "https://youtu.be/iTZ0UWoSFX0",
+            "full": "https://youtu.be/iTZ0UWoSFX0",
+            "extension": "YouTube",
             "sizeMb": 0,
-            "provider": "pending-youtube",
-            "youtubeUrl": "",
-            "embedUrl": ""
+            "provider": "youtube",
+            "youtubeUrl": "https://youtu.be/iTZ0UWoSFX0",
+            "embedUrl": "https://www.youtube.com/embed/iTZ0UWoSFX0",
+            "youtubeId": "iTZ0UWoSFX0"
           },
           "pieces": [
             {
@@ -1074,13 +1069,14 @@ window.PORTFOLIO_DATA = {
               "title": "Hogar Gamer",
               "type": "video",
               "preview": "assets/posters/new-projects/zurich-hogar-gamer.jpg",
-              "original": "",
-              "full": "",
-              "extension": "MOV",
+              "original": "https://youtu.be/iTZ0UWoSFX0",
+              "full": "https://youtu.be/iTZ0UWoSFX0",
+              "extension": "YouTube",
               "sizeMb": 0,
-              "provider": "pending-youtube",
-              "youtubeUrl": "",
-              "embedUrl": ""
+              "provider": "youtube",
+              "youtubeUrl": "https://youtu.be/iTZ0UWoSFX0",
+              "embedUrl": "https://www.youtube.com/embed/iTZ0UWoSFX0",
+              "youtubeId": "iTZ0UWoSFX0"
             }
           ]
         },
@@ -1095,13 +1091,14 @@ window.PORTFOLIO_DATA = {
             "title": "Cambias",
             "type": "video",
             "preview": "assets/posters/new-projects/toddler-cambias.jpg",
-            "original": "",
-            "full": "",
-            "extension": "MP4",
+            "original": "https://youtu.be/gaMn1IoXseU",
+            "full": "https://youtu.be/gaMn1IoXseU",
+            "extension": "YouTube",
             "sizeMb": 0,
-            "provider": "pending-youtube",
-            "youtubeUrl": "",
-            "embedUrl": ""
+            "provider": "youtube",
+            "youtubeUrl": "https://youtu.be/gaMn1IoXseU",
+            "embedUrl": "https://www.youtube.com/embed/gaMn1IoXseU",
+            "youtubeId": "gaMn1IoXseU"
           },
           "pieces": [
             {
@@ -1109,13 +1106,14 @@ window.PORTFOLIO_DATA = {
               "title": "Cambias",
               "type": "video",
               "preview": "assets/posters/new-projects/toddler-cambias.jpg",
-              "original": "",
-              "full": "",
-              "extension": "MP4",
+              "original": "https://youtu.be/gaMn1IoXseU",
+              "full": "https://youtu.be/gaMn1IoXseU",
+              "extension": "YouTube",
               "sizeMb": 0,
-              "provider": "pending-youtube",
-              "youtubeUrl": "",
-              "embedUrl": ""
+              "provider": "youtube",
+              "youtubeUrl": "https://youtu.be/gaMn1IoXseU",
+              "embedUrl": "https://www.youtube.com/embed/gaMn1IoXseU",
+              "youtubeId": "gaMn1IoXseU"
             }
           ]
         },
@@ -1527,13 +1525,14 @@ window.PORTFOLIO_DATA = {
             "title": "Rap Digital: Tiago / Bhavi 1",
             "type": "video",
             "preview": "assets/posters/new-projects/unicef-tiago-bhavi-1.jpg",
-            "original": "",
-            "full": "",
-            "extension": "MP4",
+            "original": "https://youtu.be/gm5kJDS8jWw",
+            "full": "https://youtu.be/gm5kJDS8jWw",
+            "extension": "YouTube",
             "sizeMb": 0,
-            "provider": "pending-youtube",
-            "youtubeUrl": "",
-            "embedUrl": ""
+            "provider": "youtube",
+            "youtubeUrl": "https://youtu.be/gm5kJDS8jWw",
+            "embedUrl": "https://www.youtube.com/embed/gm5kJDS8jWw",
+            "youtubeId": "gm5kJDS8jWw"
           },
           "pieces": [
             {
@@ -1541,78 +1540,84 @@ window.PORTFOLIO_DATA = {
               "title": "Rap Digital: Tiago / Bhavi 1",
               "type": "video",
               "preview": "assets/posters/new-projects/unicef-tiago-bhavi-1.jpg",
-              "original": "",
-              "full": "",
-              "extension": "MP4",
+              "original": "https://youtu.be/gm5kJDS8jWw",
+              "full": "https://youtu.be/gm5kJDS8jWw",
+              "extension": "YouTube",
               "sizeMb": 0,
-              "provider": "pending-youtube",
-              "youtubeUrl": "",
-              "embedUrl": ""
+              "provider": "youtube",
+              "youtubeUrl": "https://youtu.be/gm5kJDS8jWw",
+              "embedUrl": "https://www.youtube.com/embed/gm5kJDS8jWw",
+              "youtubeId": "gm5kJDS8jWw"
             },
             {
               "id": "new-unicef-tiago-bhavi-2",
               "title": "Rap Digital: Tiago / Bhavi 2",
               "type": "video",
               "preview": "assets/posters/new-projects/unicef-tiago-bhavi-2.jpg",
-              "original": "",
-              "full": "",
-              "extension": "MP4",
+              "original": "https://youtu.be/NgOXPmRifqQ",
+              "full": "https://youtu.be/NgOXPmRifqQ",
+              "extension": "YouTube",
               "sizeMb": 0,
-              "provider": "pending-youtube",
-              "youtubeUrl": "",
-              "embedUrl": ""
+              "provider": "youtube",
+              "youtubeUrl": "https://youtu.be/NgOXPmRifqQ",
+              "embedUrl": "https://www.youtube.com/embed/NgOXPmRifqQ",
+              "youtubeId": "NgOXPmRifqQ"
             },
             {
               "id": "new-unicef-tink-dozer",
               "title": "Rap Digital: Tink / Dozer",
               "type": "video",
               "preview": "assets/posters/new-projects/unicef-tink-dozer.jpg",
-              "original": "",
-              "full": "",
-              "extension": "MP4",
+              "original": "https://youtu.be/xBmMnbpO7Ys",
+              "full": "https://youtu.be/xBmMnbpO7Ys",
+              "extension": "YouTube",
               "sizeMb": 0,
-              "provider": "pending-youtube",
-              "youtubeUrl": "",
-              "embedUrl": ""
+              "provider": "youtube",
+              "youtubeUrl": "https://youtu.be/xBmMnbpO7Ys",
+              "embedUrl": "https://www.youtube.com/embed/xBmMnbpO7Ys",
+              "youtubeId": "xBmMnbpO7Ys"
             },
             {
               "id": "new-unicef-los-alamos-institucional",
               "title": "Los Álamos Institucional",
               "type": "video",
               "preview": "assets/posters/new-projects/unicef-los-alamos-institucional.jpg",
-              "original": "",
-              "full": "",
-              "extension": "MP4",
+              "original": "https://youtu.be/_lwujvbDqiY",
+              "full": "https://youtu.be/_lwujvbDqiY",
+              "extension": "YouTube",
               "sizeMb": 0,
-              "provider": "pending-youtube",
-              "youtubeUrl": "",
-              "embedUrl": ""
+              "provider": "youtube",
+              "youtubeUrl": "https://youtu.be/_lwujvbDqiY",
+              "embedUrl": "https://www.youtube.com/embed/_lwujvbDqiY",
+              "youtubeId": "_lwujvbDqiY"
             },
             {
               "id": "new-unicef-armado-los-alamos",
               "title": "Armado Los Álamos",
               "type": "video",
               "preview": "assets/posters/new-projects/unicef-armado-los-alamos.jpg",
-              "original": "",
-              "full": "",
-              "extension": "MP4",
+              "original": "https://youtu.be/BWgH64VXJPU",
+              "full": "https://youtu.be/BWgH64VXJPU",
+              "extension": "YouTube",
               "sizeMb": 0,
-              "provider": "pending-youtube",
-              "youtubeUrl": "",
-              "embedUrl": ""
+              "provider": "youtube",
+              "youtubeUrl": "https://youtu.be/BWgH64VXJPU",
+              "embedUrl": "https://www.youtube.com/embed/BWgH64VXJPU",
+              "youtubeId": "BWgH64VXJPU"
             },
             {
               "id": "new-unicef-sebastian-waisgrais",
               "title": "Sebastián Waisgrais",
               "type": "video",
               "preview": "assets/posters/new-projects/unicef-sebastian-waisgrais.jpg",
-              "original": "",
-              "full": "",
-              "extension": "MP4",
+              "original": "https://youtu.be/UMRgWp4XiRY",
+              "full": "https://youtu.be/UMRgWp4XiRY",
+              "extension": "YouTube",
               "sizeMb": 0,
-              "provider": "pending-youtube",
-              "youtubeUrl": "",
-              "embedUrl": ""
+              "provider": "youtube",
+              "youtubeUrl": "https://youtu.be/UMRgWp4XiRY",
+              "embedUrl": "https://www.youtube.com/embed/UMRgWp4XiRY",
+              "youtubeId": "UMRgWp4XiRY"
             }
           ]
         }
