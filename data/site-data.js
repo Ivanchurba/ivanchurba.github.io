@@ -919,6 +919,80 @@ window.PORTFOLIO_DATA = {
           ]
         },
         {
+          "title": "Cofler Extra",
+          "description": "Spot desarrollado para comunicar el lanzamiento de Cofler Extra, nuevo producto de la marca, con versiones pensadas para televisión y redes sociales.",
+          "kind": "video",
+          "galleryHref": "",
+          "mainId": "new-cofler-extra",
+          "main": {
+            "id": "new-cofler-extra",
+            "title": "Pieza principal",
+            "type": "video",
+            "preview": "assets/posters/new-projects/cofler-extra.jpg",
+            "original": "https://www.youtube.com/watch?v=0tAJYex2H74",
+            "full": "https://www.youtube.com/watch?v=0tAJYex2H74",
+            "extension": "YouTube",
+            "sizeMb": 0,
+            "provider": "youtube",
+            "youtubeUrl": "https://www.youtube.com/watch?v=0tAJYex2H74",
+            "embedUrl": "https://www.youtube.com/embed/0tAJYex2H74",
+            "youtubeId": "0tAJYex2H74"
+          },
+          "pieces": [
+            {
+              "id": "new-cofler-extra",
+              "title": "Pieza principal",
+              "type": "video",
+              "preview": "assets/posters/new-projects/cofler-extra.jpg",
+              "original": "https://www.youtube.com/watch?v=0tAJYex2H74",
+              "full": "https://www.youtube.com/watch?v=0tAJYex2H74",
+              "extension": "YouTube",
+              "sizeMb": 0,
+              "provider": "youtube",
+              "youtubeUrl": "https://www.youtube.com/watch?v=0tAJYex2H74",
+              "embedUrl": "https://www.youtube.com/embed/0tAJYex2H74",
+              "youtubeId": "0tAJYex2H74"
+            }
+          ]
+        },
+        {
+          "title": "Bon o Bon Supreme",
+          "description": "Spot desarrollado para comunicar el lanzamiento de Bon o Bon Supreme, nuevo producto de la marca, con versiones pensadas para televisión y redes sociales.",
+          "kind": "video",
+          "galleryHref": "",
+          "mainId": "new-bon-o-bon-supreme",
+          "main": {
+            "id": "new-bon-o-bon-supreme",
+            "title": "Pieza principal",
+            "type": "video",
+            "preview": "assets/posters/new-projects/bon-o-bon-supreme.jpg",
+            "original": "https://www.youtube.com/watch?v=fsi6C0tZsWg",
+            "full": "https://www.youtube.com/watch?v=fsi6C0tZsWg",
+            "extension": "YouTube",
+            "sizeMb": 0,
+            "provider": "youtube",
+            "youtubeUrl": "https://www.youtube.com/watch?v=fsi6C0tZsWg",
+            "embedUrl": "https://www.youtube.com/embed/fsi6C0tZsWg",
+            "youtubeId": "fsi6C0tZsWg"
+          },
+          "pieces": [
+            {
+              "id": "new-bon-o-bon-supreme",
+              "title": "Pieza principal",
+              "type": "video",
+              "preview": "assets/posters/new-projects/bon-o-bon-supreme.jpg",
+              "original": "https://www.youtube.com/watch?v=fsi6C0tZsWg",
+              "full": "https://www.youtube.com/watch?v=fsi6C0tZsWg",
+              "extension": "YouTube",
+              "sizeMb": 0,
+              "provider": "youtube",
+              "youtubeUrl": "https://www.youtube.com/watch?v=fsi6C0tZsWg",
+              "embedUrl": "https://www.youtube.com/embed/fsi6C0tZsWg",
+              "youtubeId": "fsi6C0tZsWg"
+            }
+          ]
+        },
+        {
           "title": "Poxipol",
           "description": "Piezas desarrolladas para Poxipol, con distintas versiones visuales adaptadas a situaciones y locaciones de campaña.",
           "kind": "video",
@@ -1477,6 +1551,285 @@ window.PORTFOLIO_DATA = {
       "accent": "#c026d3",
       "slug": "producciones",
       "projects": [
+        {
+          "title": "Copas Racing",
+          "description": "Registro fotográfico realizado junto al plantel de primera de Racing Club y sus familias con la Copa Sudamericana y la Recopa Sudamericana obtenidas por el club.",
+          "kind": "gallery",
+          "galleryHref": "",
+          "mainId": "copas-racing-01",
+          "main": {
+            "id": "copas-racing-01",
+            "title": "Foto 01",
+            "type": "image",
+            "preview": "assets/media/optimized/producciones/copas-racing/copas-racing-01.jpg",
+            "original": "assets/media/optimized/producciones/copas-racing/copas-racing-01.jpg",
+            "full": "assets/media/optimized/producciones/copas-racing/copas-racing-01.jpg",
+            "extension": "JPG",
+            "sizeMb": 0
+          },
+          "pieces": [
+            {
+              "id": "copas-racing-01",
+              "title": "Foto 01",
+              "type": "image",
+              "preview": "assets/media/optimized/producciones/copas-racing/copas-racing-01.jpg",
+              "original": "assets/media/optimized/producciones/copas-racing/copas-racing-01.jpg",
+              "full": "assets/media/optimized/producciones/copas-racing/copas-racing-01.jpg",
+              "extension": "JPG",
+              "sizeMb": 0
+            },
+            {
+              "id": "copas-racing-02",
+              "title": "Foto 02",
+              "type": "image",
+              "preview": "assets/media/optimized/producciones/copas-racing/copas-racing-02.jpg",
+              "original": "assets/media/optimized/producciones/copas-racing/copas-racing-02.jpg",
+              "full": "assets/media/optimized/producciones/copas-racing/copas-racing-02.jpg",
+              "extension": "JPG",
+              "sizeMb": 0
+            },
+            {
+              "id": "copas-racing-03",
+              "title": "Foto 03",
+              "type": "image",
+              "preview": "assets/media/optimized/producciones/copas-racing/copas-racing-03.jpg",
+              "original": "assets/media/optimized/producciones/copas-racing/copas-racing-03.jpg",
+              "full": "assets/media/optimized/producciones/copas-racing/copas-racing-03.jpg",
+              "extension": "JPG",
+              "sizeMb": 0
+            },
+            {
+              "id": "copas-racing-04",
+              "title": "Foto 04",
+              "type": "image",
+              "preview": "assets/media/optimized/producciones/copas-racing/copas-racing-04.jpg",
+              "original": "assets/media/optimized/producciones/copas-racing/copas-racing-04.jpg",
+              "full": "assets/media/optimized/producciones/copas-racing/copas-racing-04.jpg",
+              "extension": "JPG",
+              "sizeMb": 0
+            },
+            {
+              "id": "copas-racing-05",
+              "title": "Foto 05",
+              "type": "image",
+              "preview": "assets/media/optimized/producciones/copas-racing/copas-racing-05.jpg",
+              "original": "assets/media/optimized/producciones/copas-racing/copas-racing-05.jpg",
+              "full": "assets/media/optimized/producciones/copas-racing/copas-racing-05.jpg",
+              "extension": "JPG",
+              "sizeMb": 0
+            },
+            {
+              "id": "copas-racing-06",
+              "title": "Foto 06",
+              "type": "image",
+              "preview": "assets/media/optimized/producciones/copas-racing/copas-racing-06.jpg",
+              "original": "assets/media/optimized/producciones/copas-racing/copas-racing-06.jpg",
+              "full": "assets/media/optimized/producciones/copas-racing/copas-racing-06.jpg",
+              "extension": "JPG",
+              "sizeMb": 0
+            },
+            {
+              "id": "copas-racing-07",
+              "title": "Foto 07",
+              "type": "image",
+              "preview": "assets/media/optimized/producciones/copas-racing/copas-racing-07.jpg",
+              "original": "assets/media/optimized/producciones/copas-racing/copas-racing-07.jpg",
+              "full": "assets/media/optimized/producciones/copas-racing/copas-racing-07.jpg",
+              "extension": "JPG",
+              "sizeMb": 0
+            },
+            {
+              "id": "copas-racing-08",
+              "title": "Foto 08",
+              "type": "image",
+              "preview": "assets/media/optimized/producciones/copas-racing/copas-racing-08.jpg",
+              "original": "assets/media/optimized/producciones/copas-racing/copas-racing-08.jpg",
+              "full": "assets/media/optimized/producciones/copas-racing/copas-racing-08.jpg",
+              "extension": "JPG",
+              "sizeMb": 0
+            },
+            {
+              "id": "copas-racing-09",
+              "title": "Foto 09",
+              "type": "image",
+              "preview": "assets/media/optimized/producciones/copas-racing/copas-racing-09.jpg",
+              "original": "assets/media/optimized/producciones/copas-racing/copas-racing-09.jpg",
+              "full": "assets/media/optimized/producciones/copas-racing/copas-racing-09.jpg",
+              "extension": "JPG",
+              "sizeMb": 0
+            },
+            {
+              "id": "copas-racing-10",
+              "title": "Foto 10",
+              "type": "image",
+              "preview": "assets/media/optimized/producciones/copas-racing/copas-racing-10.jpg",
+              "original": "assets/media/optimized/producciones/copas-racing/copas-racing-10.jpg",
+              "full": "assets/media/optimized/producciones/copas-racing/copas-racing-10.jpg",
+              "extension": "JPG",
+              "sizeMb": 0
+            },
+            {
+              "id": "copas-racing-11",
+              "title": "Foto 11",
+              "type": "image",
+              "preview": "assets/media/optimized/producciones/copas-racing/copas-racing-11.jpg",
+              "original": "assets/media/optimized/producciones/copas-racing/copas-racing-11.jpg",
+              "full": "assets/media/optimized/producciones/copas-racing/copas-racing-11.jpg",
+              "extension": "JPG",
+              "sizeMb": 0
+            },
+            {
+              "id": "copas-racing-12",
+              "title": "Foto 12",
+              "type": "image",
+              "preview": "assets/media/optimized/producciones/copas-racing/copas-racing-12.jpg",
+              "original": "assets/media/optimized/producciones/copas-racing/copas-racing-12.jpg",
+              "full": "assets/media/optimized/producciones/copas-racing/copas-racing-12.jpg",
+              "extension": "JPG",
+              "sizeMb": 0
+            },
+            {
+              "id": "copas-racing-13",
+              "title": "Foto 13",
+              "type": "image",
+              "preview": "assets/media/optimized/producciones/copas-racing/copas-racing-13.jpg",
+              "original": "assets/media/optimized/producciones/copas-racing/copas-racing-13.jpg",
+              "full": "assets/media/optimized/producciones/copas-racing/copas-racing-13.jpg",
+              "extension": "JPG",
+              "sizeMb": 0
+            },
+            {
+              "id": "copas-racing-14",
+              "title": "Foto 14",
+              "type": "image",
+              "preview": "assets/media/optimized/producciones/copas-racing/copas-racing-14.jpg",
+              "original": "assets/media/optimized/producciones/copas-racing/copas-racing-14.jpg",
+              "full": "assets/media/optimized/producciones/copas-racing/copas-racing-14.jpg",
+              "extension": "JPG",
+              "sizeMb": 0
+            },
+            {
+              "id": "copas-racing-15",
+              "title": "Foto 15",
+              "type": "image",
+              "preview": "assets/media/optimized/producciones/copas-racing/copas-racing-15.jpg",
+              "original": "assets/media/optimized/producciones/copas-racing/copas-racing-15.jpg",
+              "full": "assets/media/optimized/producciones/copas-racing/copas-racing-15.jpg",
+              "extension": "JPG",
+              "sizeMb": 0
+            },
+            {
+              "id": "copas-racing-16",
+              "title": "Foto 16",
+              "type": "image",
+              "preview": "assets/media/optimized/producciones/copas-racing/copas-racing-16.jpg",
+              "original": "assets/media/optimized/producciones/copas-racing/copas-racing-16.jpg",
+              "full": "assets/media/optimized/producciones/copas-racing/copas-racing-16.jpg",
+              "extension": "JPG",
+              "sizeMb": 0
+            },
+            {
+              "id": "copas-racing-17",
+              "title": "Foto 17",
+              "type": "image",
+              "preview": "assets/media/optimized/producciones/copas-racing/copas-racing-17.jpg",
+              "original": "assets/media/optimized/producciones/copas-racing/copas-racing-17.jpg",
+              "full": "assets/media/optimized/producciones/copas-racing/copas-racing-17.jpg",
+              "extension": "JPG",
+              "sizeMb": 0
+            },
+            {
+              "id": "copas-racing-18",
+              "title": "Foto 18",
+              "type": "image",
+              "preview": "assets/media/optimized/producciones/copas-racing/copas-racing-18.jpg",
+              "original": "assets/media/optimized/producciones/copas-racing/copas-racing-18.jpg",
+              "full": "assets/media/optimized/producciones/copas-racing/copas-racing-18.jpg",
+              "extension": "JPG",
+              "sizeMb": 0
+            },
+            {
+              "id": "copas-racing-19",
+              "title": "Foto 19",
+              "type": "image",
+              "preview": "assets/media/optimized/producciones/copas-racing/copas-racing-19.jpg",
+              "original": "assets/media/optimized/producciones/copas-racing/copas-racing-19.jpg",
+              "full": "assets/media/optimized/producciones/copas-racing/copas-racing-19.jpg",
+              "extension": "JPG",
+              "sizeMb": 0
+            },
+            {
+              "id": "copas-racing-20",
+              "title": "Foto 20",
+              "type": "image",
+              "preview": "assets/media/optimized/producciones/copas-racing/copas-racing-20.jpg",
+              "original": "assets/media/optimized/producciones/copas-racing/copas-racing-20.jpg",
+              "full": "assets/media/optimized/producciones/copas-racing/copas-racing-20.jpg",
+              "extension": "JPG",
+              "sizeMb": 0
+            },
+            {
+              "id": "copas-racing-21",
+              "title": "Foto 21",
+              "type": "image",
+              "preview": "assets/media/optimized/producciones/copas-racing/copas-racing-21.jpg",
+              "original": "assets/media/optimized/producciones/copas-racing/copas-racing-21.jpg",
+              "full": "assets/media/optimized/producciones/copas-racing/copas-racing-21.jpg",
+              "extension": "JPG",
+              "sizeMb": 0
+            },
+            {
+              "id": "copas-racing-22",
+              "title": "Foto 22",
+              "type": "image",
+              "preview": "assets/media/optimized/producciones/copas-racing/copas-racing-22.jpg",
+              "original": "assets/media/optimized/producciones/copas-racing/copas-racing-22.jpg",
+              "full": "assets/media/optimized/producciones/copas-racing/copas-racing-22.jpg",
+              "extension": "JPG",
+              "sizeMb": 0
+            },
+            {
+              "id": "copas-racing-23",
+              "title": "Foto 23",
+              "type": "image",
+              "preview": "assets/media/optimized/producciones/copas-racing/copas-racing-23.jpg",
+              "original": "assets/media/optimized/producciones/copas-racing/copas-racing-23.jpg",
+              "full": "assets/media/optimized/producciones/copas-racing/copas-racing-23.jpg",
+              "extension": "JPG",
+              "sizeMb": 0
+            },
+            {
+              "id": "copas-racing-24",
+              "title": "Foto 24",
+              "type": "image",
+              "preview": "assets/media/optimized/producciones/copas-racing/copas-racing-24.jpg",
+              "original": "assets/media/optimized/producciones/copas-racing/copas-racing-24.jpg",
+              "full": "assets/media/optimized/producciones/copas-racing/copas-racing-24.jpg",
+              "extension": "JPG",
+              "sizeMb": 0
+            },
+            {
+              "id": "copas-racing-25",
+              "title": "Foto 25",
+              "type": "image",
+              "preview": "assets/media/optimized/producciones/copas-racing/copas-racing-25.jpg",
+              "original": "assets/media/optimized/producciones/copas-racing/copas-racing-25.jpg",
+              "full": "assets/media/optimized/producciones/copas-racing/copas-racing-25.jpg",
+              "extension": "JPG",
+              "sizeMb": 0
+            },
+            {
+              "id": "copas-racing-26",
+              "title": "Foto 26",
+              "type": "image",
+              "preview": "assets/media/optimized/producciones/copas-racing/copas-racing-26.jpg",
+              "original": "assets/media/optimized/producciones/copas-racing/copas-racing-26.jpg",
+              "full": "assets/media/optimized/producciones/copas-racing/copas-racing-26.jpg",
+              "extension": "JPG",
+              "sizeMb": 0
+            }
+          ]
+        },
         {
           "title": "UNICEF",
           "description": "Producciones audiovisuales realizadas para UNICEF en distintos formatos y campañas, incluyendo piezas institucionales, entrevistas y contenidos digitales.",

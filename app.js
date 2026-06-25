@@ -20,19 +20,22 @@ const FILTERS = [
 ];
 
 const HOME_GRID_PROJECTS = [
+  "Bon o Bon Supreme",
+  "Cofler Extra",
   "BNA Mundial",
   "Cofler Cups",
   "Colecciones La Nación",
   "Coppel México",
-  "Alfajor GOAT",
-  "UNICEF",
 ];
 
 const HOME_REEL_PROJECTS = [
+  "Bon o Bon Supreme",
+  "Cofler Extra",
   "BNA Mundial",
   "Cofler Cups",
   "Colecciones La Nación",
   "Coppel México",
+  "Copas Racing",
   "Alfajor GOAT",
   "UNICEF",
   "Poxipol",
@@ -81,6 +84,10 @@ const PROJECT_DETAILS = {
     role: "Producción integral grupal",
     brief: "Trabajo audiovisual realizado en el marco de la materia Iluminación y Cámara II. Fue una producción grupal desarrollada junto a tres compañeros, abordando el proceso completo de realización.",
   },
+  "Copas Racing": {
+    role: "Asistencia",
+    brief: "Registro fotográfico realizado junto al plantel de primera de Racing Club y sus familias con la Copa Sudamericana y la Recopa Sudamericana obtenidas por el club.",
+  },
   "Coppel México": {
     role: "Generación de imágenes IA",
     brief: "Serie de imágenes generadas para tiendas físicas de Coppel México, desarrolladas como piezas visuales de campaña y comunicación en punto de venta.",
@@ -128,6 +135,14 @@ const PROJECT_DETAILS = {
   "Cofler Gold": {
     role: "Generación de imágenes y video IA",
     brief: "Pieza desarrollada para el lanzamiento de Cofler Gold, con foco en presentación visual, producto y comunicación de marca.",
+  },
+  "Cofler Extra": {
+    role: "Generación de imágenes y video IA",
+    brief: "Spot desarrollado para comunicar el lanzamiento de Cofler Extra, nuevo producto de la marca, con versiones pensadas para televisión y redes sociales.",
+  },
+  "Bon o Bon Supreme": {
+    role: "Generación de imágenes y video IA",
+    brief: "Spot desarrollado para comunicar el lanzamiento de Bon o Bon Supreme, nuevo producto de la marca, con versiones pensadas para televisión y redes sociales.",
   },
   "Poxipol": {
     role: "Generación de imágenes y video IA",
@@ -207,9 +222,9 @@ function projectId(project) {
   return slug(`${project.section.slug}-${project.title}`);
 }
 
-function imageMarkup(item, className = "media") {
+function imageMarkup(item, className = "media", loading = "lazy") {
   if (item?.preview) {
-    return `<img class="${className}" src="${escapeHtml(item.preview)}" alt="${escapeHtml(item.title)}" loading="lazy">`;
+    return `<img class="${className}" src="${escapeHtml(item.preview)}" alt="${escapeHtml(item.title)}" loading="${escapeHtml(loading)}" decoding="async">`;
   }
   return `<div class="${className} media-placeholder"><span>${escapeHtml(item?.extension || "Media")}</span></div>`;
 }
@@ -365,14 +380,13 @@ function renderHome() {
 function renderHeroMontage() {
   const montage = $("#heroMontage");
   if (!montage) return;
-  if ($(".montage-item", montage)) return;
   const featured = projectsByTitle(HOME_REEL_PROJECTS).filter((project) => project.main.preview);
   const fallbackProjects = allProjects().filter((project) => project.main.preview && !featured.some((item) => item.title === project.title));
   const projects = [...featured, ...fallbackProjects].slice(0, 12);
   if (!projects.length) return;
   const cards = projects.map((project, index) => `
     <button class="montage-item" data-open-project="${escapeHtml(projectId(project))}" style="--card-index:${index}">
-      ${imageMarkup(project.main, "montage-image")}
+      ${imageMarkup(project.main, "montage-image", "eager")}
       <strong>${escapeHtml(project.title)}</strong>
     </button>
   `).join("");

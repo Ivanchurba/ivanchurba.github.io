@@ -3598,3 +3598,141 @@ body[data-page="home"]::before {
     border-radius: 16px;
   }
 }
+
+/* Final gallery drawer alignment */
+.project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer {
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto minmax(7.5rem, auto);
+  gap: clamp(0.9rem, 1.6vw, 1.25rem);
+  overflow: auto;
+  align-content: start;
+}
+
+.project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-feature {
+  height: auto;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: minmax(17rem, 0.34fr) minmax(0, 0.66fr);
+  grid-template-rows: auto;
+  gap: clamp(1rem, 2vw, 1.6rem);
+  align-items: center;
+}
+
+.project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-heading {
+  width: 100%;
+  max-width: 30rem;
+  align-self: center;
+}
+
+.project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-heading h2 {
+  font-size: clamp(1.8rem, 3.1vw, 3.6rem);
+}
+
+.project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-media {
+  min-width: 0;
+  min-height: 0;
+}
+
+.project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-carousel {
+  height: auto;
+  min-height: 0;
+  max-height: min(58vh, 38rem);
+  display: grid;
+  grid-template-columns: 2.8rem minmax(0, 1fr) 2.8rem;
+  grid-template-rows: minmax(0, 1fr) auto;
+  gap: 0.65rem;
+  align-items: center;
+}
+
+.project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-carousel .carousel-frame {
+  grid-column: 2;
+  grid-row: 1;
+  width: 100%;
+  height: min(58vh, 38rem);
+  min-height: 22rem;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  justify-self: center;
+  align-self: center;
+}
+
+.project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-carousel .carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-carousel .carousel-fullscreen {
+  grid-column: 2;
+  grid-row: 2;
+  justify-self: center;
+}
+
+.project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-related {
+  width: 100%;
+  max-width: 100%;
+  min-height: 7.25rem;
+  overflow: hidden;
+}
+
+.project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-thumb-strip {
+  width: 100%;
+  max-width: 100%;
+  grid-auto-columns: clamp(8rem, 13vw, 12rem);
+  padding: 0 0 0.35rem;
+}
+
+@media (max-width: 920px) {
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer {
+    height: auto;
+    min-height: 100%;
+    overflow: auto;
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-feature {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-heading {
+    max-width: 100%;
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-carousel,
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-carousel .carousel-frame {
+    height: clamp(20rem, 56vh, 34rem);
+    max-height: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer {
+    height: auto;
+    min-height: calc(100dvh - 3.4rem);
+    grid-template-rows: auto auto;
+    overflow: auto;
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-heading p:not(.eyebrow) {
+    -webkit-line-clamp: 3;
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-carousel {
+    grid-template-columns: 2.25rem minmax(0, 1fr) 2.25rem;
+    height: clamp(18rem, 52vh, 28rem);
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-carousel .carousel-frame {
+    height: 100%;
+    min-height: 0;
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-related {
+    min-height: 6.6rem;
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-thumb-strip {
+    grid-auto-columns: min(42vw, 9.25rem);
+  }
+}
