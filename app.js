@@ -229,6 +229,19 @@ function imageMarkup(item, className = "media", loading = "lazy") {
   return `<div class="${className} media-placeholder"><span>${escapeHtml(item?.extension || "Media")}</span></div>`;
 }
 
+function brandLogoMarkup(project, className = "brand-logo-overlay") {
+  if (!project?.brandLogo) return "";
+  const variant = ` is-${slug(project.brandLogoAnimation || "spotlight")}`;
+  const treatment = project.brandLogoTreatment ? ` treatment-${slug(project.brandLogoTreatment)}` : "";
+  const scale = project.brandLogoScale ? ` scale-${slug(project.brandLogoScale)}` : "";
+  const align = project.brandLogoAlign ? ` align-${slug(project.brandLogoAlign)}` : "";
+  return `
+    <span class="${className}${variant}${treatment}${scale}${align}" aria-hidden="true">
+      <img src="${escapeHtml(project.brandLogo)}" alt="" loading="lazy" decoding="async">
+    </span>
+  `;
+}
+
 function imageFullMarkup(item, className = "media") {
   const source = item?.full || item?.original || item?.preview;
   if (source) {
@@ -388,8 +401,9 @@ function renderHeroMontage() {
   const projects = [...featured, ...fallbackProjects].slice(0, 12);
   if (!projects.length) return;
   const cards = projects.map((project, index) => `
-    <button class="montage-item" data-open-project="${escapeHtml(projectId(project))}" style="--card-index:${index}">
+    <button class="montage-item${project.brandLogo ? " has-brand-logo" : ""}" data-open-project="${escapeHtml(projectId(project))}" style="--card-index:${index}">
       ${imageMarkup(project.main, "montage-image", "eager")}
+      ${brandLogoMarkup(project)}
       <strong>${escapeHtml(project.title)}</strong>
     </button>
   `).join("");
@@ -540,9 +554,10 @@ function renderWorkGrid() {
   const projects = filteredProjects();
   const visibleProjects = showAllProjects ? projects : projects.slice(0, 6);
   grid.innerHTML = visibleProjects.map((project, index) => `
-    <button class="work-card reveal is-visible" data-open-project="${escapeHtml(projectId(project))}" style="--delay:${index * 24}ms">
+    <button class="work-card reveal is-visible${project.brandLogo ? " has-brand-logo" : ""}" data-open-project="${escapeHtml(projectId(project))}" style="--delay:${index * 24}ms">
       <span class="work-thumb">
         ${imageMarkup(project.main, "work-image")}
+        ${brandLogoMarkup(project)}
         <span class="work-hover-label">Ver detalle</span>
       </span>
       <span class="work-card-copy">

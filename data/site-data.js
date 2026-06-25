@@ -48,7 +48,10 @@ window.PORTFOLIO_DATA = {
               "youtubeUrl": "https://youtu.be/6-AFnC29qls",
               "embedUrl": "https://www.youtube.com/embed/6-AFnC29qls"
             }
-          ]
+          ],
+          "brandLogo": "assets/logos/goat.png",
+          "brandLogoAnimation": "spotlight",
+          "brandLogoScale": "xlarge"
         },
         {
           "title": "Animatic Santa Fe",
@@ -99,7 +102,9 @@ window.PORTFOLIO_DATA = {
               "youtubeUrl": "https://youtu.be/euzPqKLAH3I",
               "embedUrl": "https://www.youtube.com/embed/euzPqKLAH3I"
             }
-          ]
+          ],
+          "brandLogo": "assets/logos/santa-fe.png",
+          "brandLogoAnimation": "spotlight"
         },
         {
           "title": "Arcor Halloween",
@@ -150,7 +155,9 @@ window.PORTFOLIO_DATA = {
               "youtubeUrl": "https://youtu.be/AdRL4PNX4XQ",
               "embedUrl": "https://www.youtube.com/embed/AdRL4PNX4XQ"
             }
-          ]
+          ],
+          "brandLogo": "assets/logos/arcor-halloween.png",
+          "brandLogoAnimation": "spotlight"
         },
         {
           "title": "Arcor Navidad",
@@ -243,7 +250,9 @@ window.PORTFOLIO_DATA = {
               "youtubeUrl": "https://youtu.be/Ekk3WStJkTQ",
               "embedUrl": "https://www.youtube.com/embed/Ekk3WStJkTQ"
             }
-          ]
+          ],
+          "brandLogo": "assets/logos/arcor-navidad.png",
+          "brandLogoAnimation": "spotlight"
         },
         {
           "title": "Arcor Pascuas",
@@ -322,7 +331,10 @@ window.PORTFOLIO_DATA = {
               "youtubeUrl": "https://youtu.be/T3AnpPDwf0g",
               "embedUrl": "https://www.youtube.com/embed/T3AnpPDwf0g"
             }
-          ]
+          ],
+          "brandLogo": "assets/logos/arcor-pascuas.png",
+          "brandLogoAnimation": "spotlight",
+          "brandLogoScale": "large"
         },
         {
           "title": "Cofler Cups",
@@ -359,7 +371,9 @@ window.PORTFOLIO_DATA = {
               "youtubeUrl": "https://youtu.be/AC-zYU-7IyY",
               "embedUrl": "https://www.youtube.com/embed/AC-zYU-7IyY"
             }
-          ]
+          ],
+          "brandLogo": "assets/logos/cofler-extra.png",
+          "brandLogoAnimation": "spotlight"
         },
         {
           "title": "Animatic Imperial",
@@ -396,7 +410,9 @@ window.PORTFOLIO_DATA = {
               "youtubeUrl": "https://youtu.be/5QK5FIsngxk",
               "embedUrl": "https://www.youtube.com/embed/5QK5FIsngxk"
             }
-          ]
+          ],
+          "brandLogo": "assets/logos/imperial.png",
+          "brandLogoAnimation": "spotlight"
         },
         {
           "title": "Animatic Seguros",
@@ -433,7 +449,11 @@ window.PORTFOLIO_DATA = {
               "youtubeUrl": "https://youtu.be/hAiqBGWj_7Q",
               "embedUrl": "https://www.youtube.com/embed/hAiqBGWj_7Q"
             }
-          ]
+          ],
+          "brandLogo": "assets/logos/seguros.png",
+          "brandLogoAnimation": "spotlight",
+          "brandLogoTreatment": "warm-mono",
+          "brandLogoAlign": "lift"
         },
         {
           "title": "Semana de la Dulzura",
@@ -470,7 +490,10 @@ window.PORTFOLIO_DATA = {
               "youtubeUrl": "https://youtu.be/InaOZRp_ADU",
               "embedUrl": "https://www.youtube.com/embed/InaOZRp_ADU"
             }
-          ]
+          ],
+          "brandLogo": "assets/logos/arcor.png",
+          "brandLogoAnimation": "spotlight",
+          "brandLogoScale": "small"
         }
       ]
     },
@@ -559,7 +582,9 @@ window.PORTFOLIO_DATA = {
               "youtubeUrl": "https://youtu.be/cDsAbMgQFCg",
               "embedUrl": "https://www.youtube.com/embed/cDsAbMgQFCg"
             }
-          ]
+          ],
+          "brandLogo": "assets/logos/bna.png",
+          "brandLogoAnimation": "spotlight"
         },
         {
           "title": "Colecciones La Nación",
@@ -680,7 +705,9 @@ window.PORTFOLIO_DATA = {
               "youtubeUrl": "https://youtu.be/32graIt3jCE",
               "embedUrl": "https://www.youtube.com/embed/32graIt3jCE"
             }
-          ]
+          ],
+          "brandLogo": "assets/logos/colecciones-ln.png",
+          "brandLogoAnimation": "spotlight"
         },
         {
           "title": "Coppel México",
@@ -879,7 +906,11 @@ window.PORTFOLIO_DATA = {
               "extension": "JPG",
               "sizeMb": 767.7
             }
-          ]
+          ],
+          "brandLogo": "assets/logos/coppel.png",
+          "brandLogoAnimation": "spotlight",
+          "brandLogoTreatment": "warm-mono",
+          "brandLogoScale": "compact"
         },
         {
           "title": "Cofler Gold",
@@ -916,7 +947,9 @@ window.PORTFOLIO_DATA = {
               "embedUrl": "https://www.youtube.com/embed/IcKBIO5QPwE",
               "youtubeId": "IcKBIO5QPwE"
             }
-          ]
+          ],
+          "brandLogo": "assets/logos/cofler-extra.png",
+          "brandLogoAnimation": "spotlight"
         },
         {
           "title": "Cofler Extra",
@@ -953,7 +986,9 @@ window.PORTFOLIO_DATA = {
               "embedUrl": "https://www.youtube.com/embed/0tAJYex2H74",
               "youtubeId": "0tAJYex2H74"
             }
-          ]
+          ],
+          "brandLogo": "assets/logos/cofler-extra.png",
+          "brandLogoAnimation": "spotlight"
         },
         {
           "title": "Bon o Bon Supreme",
@@ -990,7 +1025,9 @@ window.PORTFOLIO_DATA = {
               "embedUrl": "https://www.youtube.com/embed/fsi6C0tZsWg",
               "youtubeId": "fsi6C0tZsWg"
             }
-          ]
+          ],
+          "brandLogo": "assets/logos/bon-o-bon-supreme.png",
+          "brandLogoAnimation": "spotlight"
         },
         {
           "title": "Poxipol",
@@ -1041,7 +1078,9 @@ window.PORTFOLIO_DATA = {
               "embedUrl": "https://www.youtube.com/embed/flEELFWE8I4",
               "youtubeId": "flEELFWE8I4"
             }
-          ]
+          ],
+          "brandLogo": "assets/logos/poxipol.png",
+          "brandLogoAnimation": "spotlight"
         },
         {
           "title": "Hogareñas",
@@ -1078,7 +1117,11 @@ window.PORTFOLIO_DATA = {
               "embedUrl": "https://www.youtube.com/embed/QAQPJ0wSoJ4",
               "youtubeId": "QAQPJ0wSoJ4"
             }
-          ]
+          ],
+          "brandLogo": "assets/logos/hogarenas.png",
+          "brandLogoAnimation": "spotlight",
+          "brandLogoTreatment": "warm-mono",
+          "brandLogoAlign": "lift"
         },
         {
           "title": "Zurich Hogar Gamer",
@@ -1115,7 +1158,10 @@ window.PORTFOLIO_DATA = {
               "embedUrl": "https://www.youtube.com/embed/iTZ0UWoSFX0",
               "youtubeId": "iTZ0UWoSFX0"
             }
-          ]
+          ],
+          "brandLogo": "assets/logos/zurich.png",
+          "brandLogoAnimation": "spotlight",
+          "brandLogoTreatment": "warm-mono"
         },
         {
           "title": "Toddler Cambias",
@@ -1152,7 +1198,9 @@ window.PORTFOLIO_DATA = {
               "embedUrl": "https://www.youtube.com/embed/gaMn1IoXseU",
               "youtubeId": "gaMn1IoXseU"
             }
-          ]
+          ],
+          "brandLogo": "assets/logos/toddler.png",
+          "brandLogoAnimation": "spotlight"
         },
         {
           "title": "Storyboard Prosegur",
@@ -1391,7 +1439,10 @@ window.PORTFOLIO_DATA = {
               "extension": "PNG",
               "sizeMb": 8
             }
-          ]
+          ],
+          "brandLogo": "assets/logos/prosegur.png",
+          "brandLogoAnimation": "spotlight",
+          "brandLogoTreatment": "warm-mono"
         },
         {
           "title": "Hamlet",
@@ -1428,7 +1479,10 @@ window.PORTFOLIO_DATA = {
               "youtubeUrl": "https://youtu.be/jQAGhvMeyOA",
               "embedUrl": "https://www.youtube.com/embed/jQAGhvMeyOA"
             }
-          ]
+          ],
+          "brandLogo": "assets/logos/arcor.png",
+          "brandLogoAnimation": "spotlight",
+          "brandLogoScale": "small"
         },
         {
           "title": "Cofler Obleas Max",
@@ -1465,7 +1519,9 @@ window.PORTFOLIO_DATA = {
               "youtubeUrl": "https://youtu.be/Qxbnex-0x74",
               "embedUrl": "https://www.youtube.com/embed/Qxbnex-0x74"
             }
-          ]
+          ],
+          "brandLogo": "assets/logos/cofler-extra.png",
+          "brandLogoAnimation": "spotlight"
         },
         {
           "title": "Cofler Dulce de Leche",
@@ -1502,7 +1558,9 @@ window.PORTFOLIO_DATA = {
               "youtubeUrl": "https://youtu.be/ofxjjZ5Vkc4",
               "embedUrl": "https://www.youtube.com/embed/ofxjjZ5Vkc4"
             }
-          ]
+          ],
+          "brandLogo": "assets/logos/cofler-extra.png",
+          "brandLogoAnimation": "spotlight"
         },
         {
           "title": "T-Mobile / Bad Bunny",
@@ -1539,7 +1597,10 @@ window.PORTFOLIO_DATA = {
               "youtubeUrl": "https://youtu.be/XpHZPCY6ifg",
               "embedUrl": "https://www.youtube.com/embed/XpHZPCY6ifg"
             }
-          ]
+          ],
+          "brandLogo": "assets/logos/t-mobile.png",
+          "brandLogoAnimation": "spotlight",
+          "brandLogoTreatment": "warm-mono"
         }
       ]
     },
@@ -1828,7 +1889,10 @@ window.PORTFOLIO_DATA = {
               "extension": "JPG",
               "sizeMb": 0
             }
-          ]
+          ],
+          "brandLogo": "assets/logos/racing.png",
+          "brandLogoAnimation": "spotlight",
+          "brandLogoAlign": "lift"
         },
         {
           "title": "UNICEF",
@@ -1935,7 +1999,10 @@ window.PORTFOLIO_DATA = {
               "embedUrl": "https://www.youtube.com/embed/UMRgWp4XiRY",
               "youtubeId": "UMRgWp4XiRY"
             }
-          ]
+          ],
+          "brandLogo": "assets/logos/unicef.png",
+          "brandLogoAnimation": "spotlight",
+          "brandLogoTreatment": "warm-mono"
         },
         {
           "title": "Pizza Para Ocho",
@@ -1972,7 +2039,10 @@ window.PORTFOLIO_DATA = {
               "youtubeUrl": "https://youtu.be/17kklHbTE2w",
               "embedUrl": "https://www.youtube.com/embed/17kklHbTE2w"
             }
-          ]
+          ],
+          "brandLogo": "assets/logos/uba.png",
+          "brandLogoAnimation": "spotlight",
+          "brandLogoTreatment": "warm-mono"
         }
       ]
     }

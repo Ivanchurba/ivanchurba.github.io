@@ -1299,13 +1299,243 @@ body.drawer-open {
   width: 100%;
   height: 100%;
   display: block;
+  justify-self: center;
   object-fit: cover;
-  transition: transform 450ms ease, filter 220ms ease;
+  transition: transform 720ms cubic-bezier(.2,.8,.2,1), filter 420ms ease;
+}
+
+.work-card[data-open-project="edicion-generacion-ia-arcor-pascuas"] .work-image {
+  width: auto;
+  justify-self: center;
 }
 
 .work-card:hover .work-image {
   transform: scale(1.055);
   filter: saturate(1.08) contrast(1.04);
+}
+
+.work-card.has-brand-logo:hover .work-image {
+  transform: scale(1.075);
+  filter: saturate(0.72) contrast(1.04) brightness(0.38);
+}
+
+.brand-logo-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  padding: clamp(1.4rem, 4vw, 3.2rem);
+  pointer-events: none;
+  opacity: 0;
+  clip-path: inset(48% 0 48% 0 round 18px);
+  transform: translateY(0.85rem) scale(0.92);
+  filter: none;
+  transition:
+    opacity 320ms ease,
+    clip-path 620ms cubic-bezier(.2,.8,.2,1),
+    transform 620ms cubic-bezier(.2,.8,.2,1);
+}
+
+.brand-logo-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.36), transparent 36%),
+    radial-gradient(circle at 50% 52%, rgba(192, 38, 211, 0.2), transparent 48%),
+    rgba(4, 4, 7, 0.48);
+  opacity: 0;
+  transform: scale(0.88);
+  transition: opacity 360ms ease, transform 760ms cubic-bezier(.2,.8,.2,1);
+}
+
+.brand-logo-overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(110deg, transparent 18%, rgba(255, 255, 255, 0.16) 48%, transparent 72%);
+  opacity: 0;
+  transform: translateX(-120%);
+  transition: opacity 200ms ease, transform 820ms cubic-bezier(.2,.8,.2,1);
+}
+
+.brand-logo-overlay.is-spotlight {
+  clip-path: circle(0 at 50% 50%);
+  transform: scale(1.08);
+  filter: none;
+  transition:
+    opacity 260ms ease,
+    clip-path 720ms cubic-bezier(.16,1,.3,1),
+    transform 720ms cubic-bezier(.16,1,.3,1);
+}
+
+.brand-logo-overlay.is-spotlight::before {
+  background:
+    radial-gradient(circle at 50% 48%, rgba(139, 92, 246, 0.14), transparent 42%),
+    linear-gradient(180deg, rgba(4, 4, 7, 0.18), rgba(4, 4, 7, 0.5)),
+    rgba(4, 4, 7, 0.2);
+  transform: none;
+}
+
+.brand-logo-overlay.is-spotlight::after {
+  background: linear-gradient(105deg, transparent 24%, rgba(255,255,255,0.13) 49%, transparent 66%);
+  transform: translateX(-120%);
+  transition: opacity 220ms ease, transform 820ms cubic-bezier(.16,1,.3,1);
+}
+
+.brand-logo-overlay.is-spotlight img {
+  transform: translateY(0.5rem) scale(0.9);
+  opacity: 0;
+  transition: opacity 360ms ease 120ms, transform 620ms cubic-bezier(.16,1,.3,1) 80ms;
+}
+
+.brand-logo-overlay img {
+  width: min(72%, 20rem);
+  max-height: 48%;
+  object-fit: contain;
+  filter:
+    drop-shadow(0 16px 30px rgba(0, 0, 0, 0.62))
+    drop-shadow(0 0 18px rgba(139, 92, 246, 0.28));
+}
+
+.brand-logo-overlay.scale-small img {
+  width: min(46%, 12rem);
+  max-height: 34%;
+}
+
+.brand-logo-overlay.scale-compact img {
+  width: min(48%, 13.5rem);
+  max-height: 34%;
+}
+
+.brand-logo-overlay.scale-large img {
+  width: min(88%, 26rem);
+  max-height: 68%;
+}
+
+.brand-logo-overlay.scale-xlarge img {
+  width: min(96%, 31rem);
+  max-height: 78%;
+}
+
+.brand-logo-overlay.treatment-warm-mono img {
+  filter:
+    brightness(0) saturate(100%) invert(95%) sepia(13%) saturate(330%) hue-rotate(333deg) brightness(104%) contrast(94%)
+    drop-shadow(0 16px 30px rgba(0, 0, 0, 0.62))
+    drop-shadow(0 0 18px rgba(139, 92, 246, 0.2));
+  opacity: 0.96;
+}
+
+.brand-logo-overlay.treatment-soft-color img {
+  filter:
+    saturate(0.58) contrast(0.92) brightness(1.04)
+    drop-shadow(0 16px 30px rgba(0, 0, 0, 0.62))
+    drop-shadow(0 0 18px rgba(139, 92, 246, 0.2));
+  opacity: 0.9;
+}
+
+.brand-logo-overlay.treatment-desaturated img {
+  filter:
+    grayscale(0.68) saturate(0.58) contrast(1.02) brightness(1.04)
+    drop-shadow(0 16px 30px rgba(0, 0, 0, 0.62))
+    drop-shadow(0 0 18px rgba(139, 92, 246, 0.18));
+  opacity: 0.94;
+}
+
+.work-card:hover .brand-logo-overlay,
+.montage-item:hover .brand-logo-overlay {
+  opacity: 1;
+  clip-path: inset(0 0 0 0 round 18px);
+  transform: translateY(0) scale(1);
+}
+
+.work-card:hover .brand-logo-overlay.is-spotlight,
+.montage-item:hover .brand-logo-overlay.is-spotlight {
+  clip-path: circle(78% at 50% 50%);
+  transform: scale(1.5);
+}
+
+.work-card:hover .brand-logo-overlay::before,
+.montage-item:hover .brand-logo-overlay::before {
+  opacity: 1;
+  transform: scale(1);
+  animation: brandGlowPulse 2.8s ease-in-out infinite;
+}
+
+.work-card:hover .brand-logo-overlay.is-spotlight::before,
+.montage-item:hover .brand-logo-overlay.is-spotlight::before {
+  transform: none;
+  animation: none;
+}
+
+.work-card:hover .brand-logo-overlay::after,
+.montage-item:hover .brand-logo-overlay::after {
+  opacity: 1;
+  transform: translateX(120%);
+}
+
+.work-card:hover .brand-logo-overlay.is-spotlight::after,
+.montage-item:hover .brand-logo-overlay.is-spotlight::after {
+  transform: translateX(120%);
+}
+
+.work-card:hover .brand-logo-overlay.is-spotlight img,
+.montage-item:hover .brand-logo-overlay.is-spotlight img {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.hero-montage.is-marquee .brand-logo-overlay {
+  padding: clamp(1rem, 2.4vw, 2.1rem);
+}
+
+.hero-montage.is-marquee .brand-logo-overlay img {
+  width: min(50%, 15rem);
+  max-height: 38%;
+}
+
+.hero-montage.is-marquee .brand-logo-overlay.scale-compact img {
+  width: min(42%, 11rem);
+  max-height: 30%;
+}
+
+.hero-montage.is-marquee .brand-logo-overlay.scale-large img {
+  width: min(58%, 17rem);
+  max-height: 46%;
+}
+
+.hero-montage.is-marquee .brand-logo-overlay.scale-xlarge img {
+  width: min(66%, 19rem);
+  max-height: 54%;
+}
+
+.hero-montage.is-marquee .montage-item:hover .brand-logo-overlay.is-spotlight.scale-compact img {
+  transform: translateY(0) scale(0.92);
+}
+
+.brand-logo-overlay.is-spotlight.align-raise img {
+  transform: translateY(-0.6rem) scale(0.9);
+}
+
+.work-card:hover .brand-logo-overlay.is-spotlight.align-raise img,
+.montage-item:hover .brand-logo-overlay.is-spotlight.align-raise img {
+  transform: translateY(-1.25rem) scale(1);
+}
+
+.brand-logo-overlay.is-spotlight.align-lift img {
+  transform: translateY(-1.25rem) scale(0.9);
+}
+
+.work-card:hover .brand-logo-overlay.is-spotlight.align-lift img,
+.montage-item:hover .brand-logo-overlay.is-spotlight.align-lift img {
+  transform: translateY(-2.35rem) scale(1);
+}
+
+.work-card.has-brand-logo:hover .work-hover-label {
+  opacity: 0;
 }
 
 .work-hover-label {
@@ -3562,6 +3792,46 @@ body[data-page="home"]::before {
 .hero-montage.is-marquee .montage-item:hover .montage-image {
   transform: scale(1.055);
   filter: saturate(1.06) contrast(1.06) brightness(0.98);
+}
+
+.hero-montage.is-marquee .montage-item.has-brand-logo:hover .montage-image {
+  filter: saturate(0.82) contrast(1.04) brightness(0.48);
+}
+
+@keyframes brandGlowPulse {
+  0%, 100% {
+    opacity: 0.82;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.04);
+  }
+}
+
+@keyframes brandSpotlightPulse {
+  0%, 100% {
+    opacity: 0.78;
+    filter: blur(0);
+  }
+
+  50% {
+    opacity: 1;
+    filter: blur(2px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-logo-overlay,
+  .brand-logo-overlay::before,
+  .brand-logo-overlay::after {
+    transition: opacity 120ms ease !important;
+    animation: none !important;
+    transform: none !important;
+    filter: none !important;
+    clip-path: none !important;
+  }
 }
 
 .hero-montage.is-marquee .montage-item strong,
