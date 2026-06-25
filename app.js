@@ -380,8 +380,11 @@ function renderHome() {
 function renderHeroMontage() {
   const montage = $("#heroMontage");
   if (!montage) return;
-  const featured = projectsByTitle(HOME_REEL_PROJECTS).filter((project) => project.main.preview);
-  const fallbackProjects = allProjects().filter((project) => project.main.preview && !featured.some((item) => item.title === project.title));
+  montage.closest(".hero-montage")?.classList.add("is-marquee");
+  reelState.loopReady = false;
+  reelState.loopWidth = 0;
+  const featured = projectsByTitle(HOME_REEL_PROJECTS).filter((project) => project?.main?.preview);
+  const fallbackProjects = allProjects().filter((project) => project?.main?.preview && !featured.some((item) => item.title === project.title));
   const projects = [...featured, ...fallbackProjects].slice(0, 12);
   if (!projects.length) return;
   const cards = projects.map((project, index) => `
@@ -410,6 +413,9 @@ function moveReel(direction) {
   pauseHeroSlider("temporary");
   const gap = parseFloat(getComputedStyle(set).gap || "0");
   const distance = card.getBoundingClientRect().width + gap;
+  if (direction < 0 && reelState.loopWidth && viewport.scrollLeft < distance) {
+    viewport.scrollLeft += reelState.loopWidth;
+  }
   viewport.scrollBy({ left: direction * distance, behavior: "smooth" });
   scheduleReelResume();
 }
@@ -454,12 +460,9 @@ function normalizeHeroSliderScroll() {
   const viewport = $(".montage-viewport");
   if (!viewport || !reelState.loopWidth) return;
   const loopWidth = reelState.loopWidth;
-  const upperThreshold = loopWidth * 1.5;
-  const lowerThreshold = loopWidth * 0.5;
-
-  if (viewport.scrollLeft >= upperThreshold) {
+  if (viewport.scrollLeft >= loopWidth) {
     viewport.scrollLeft -= loopWidth;
-  } else if (viewport.scrollLeft <= lowerThreshold) {
+  } else if (viewport.scrollLeft < 0) {
     viewport.scrollLeft += loopWidth;
   }
 }
@@ -477,17 +480,18 @@ function setupInfiniteReel() {
   const sets = $$(".montage-set", strip);
   if (!viewport || !strip || !sets.length) return;
 
-  if (sets.length < 3) {
+  while ($$(".montage-set", strip).length < 3) {
     const clone = sets[0].cloneNode(true);
     clone.setAttribute("aria-hidden", "true");
     strip.append(clone);
   }
 
-  reelState.loopWidth = sets[0].scrollWidth;
+  const firstSet = $(".montage-set", strip);
+  reelState.loopWidth = firstSet?.scrollWidth || 0;
   if (!reelState.loopWidth) return;
 
   if (!reelState.loopReady) {
-    viewport.scrollLeft = reelState.loopWidth;
+    viewport.scrollLeft = 0;
     reelState.loopReady = true;
     let ticking = false;
     viewport.addEventListener("scroll", () => {
