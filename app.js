@@ -804,17 +804,23 @@ function renderProjectDrawer() {
       <div class="drawer-heading">
         <p class="eyebrow">${escapeHtml(projectSectionLabel(project.section))} · ${escapeHtml(projectType(project))}</p>
         <h2 id="drawerTitle">${escapeHtml(project.title)}</h2>
+      </div>
+      <div class="drawer-context">
         ${projectRoleMarkup(project)}
-        <p>${escapeHtml(projectBrief(project))}</p>
+        <p class="drawer-brief">${escapeHtml(projectBrief(project))}</p>
       </div>
-      <div class="drawer-media" id="drawerMedia">
-        ${isGallery ? drawerGalleryFeaturedMarkup() : drawerVideoMarkup(project, drawerState.piece)}
+      <div class="drawer-stage">
+        <div class="drawer-media" id="drawerMedia">
+          ${isGallery ? drawerGalleryFeaturedMarkup() : drawerVideoMarkup(project, drawerState.piece)}
+        </div>
+        <div class="drawer-related">
+          ${isGallery ? drawerGalleryMarkup() : project.pieces.length > 1 ? drawerPieceListMarkup(project) : ""}
+        </div>
       </div>
-    </div>
-    <div class="drawer-related">
-      ${isGallery ? drawerGalleryMarkup() : project.pieces.length > 1 ? drawerPieceListMarkup(project) : ""}
     </div>
   `;
+  bindDrawerMediaLoad();
+  syncDrawerRelatedHeight();
 }
 
 function scrollDrawerToTop() {
@@ -824,6 +830,31 @@ function scrollDrawerToTop() {
     panel?.scrollTo({ top: 0, behavior: "auto" });
     body?.scrollTo?.({ top: 0, behavior: "auto" });
   });
+}
+
+function syncDrawerRelatedHeight() {
+  window.requestAnimationFrame(() => {
+    const body = $("#drawerBody");
+    const galleryImage = $("#drawerMedia .carousel-image");
+    const media = $("#drawerMedia .drawer-video-frame") || galleryImage || $("#drawerMedia .carousel-frame");
+    if (!body || !media) return;
+    const height = media.getBoundingClientRect().height;
+    if (height > 0) body.style.setProperty("--drawer-media-height", `${height}px`);
+    if (body.classList.contains("is-gallery-drawer") && galleryImage) {
+      const ratio = galleryImage.naturalWidth && galleryImage.naturalHeight
+        ? galleryImage.naturalWidth / galleryImage.naturalHeight
+        : 16 / 9;
+      const viewportCap = Math.max(420, window.innerWidth * 0.58);
+      const galleryWidth = Math.min(Math.max(height * ratio, 320), viewportCap);
+      body.style.setProperty("--drawer-gallery-width", `${galleryWidth}px`);
+      body.style.setProperty("--drawer-gallery-stage-width", `${galleryWidth + 92}px`);
+    }
+  });
+}
+
+function bindDrawerMediaLoad() {
+  const image = $("#drawerMedia .carousel-image");
+  if (image) image.onload = syncDrawerRelatedHeight;
 }
 
 function renderProjectDrawerAtTop() {
@@ -904,6 +935,7 @@ function setDrawerGalleryIndex(index) {
   }
   image.src = piece.full || piece.original || piece.preview || "";
   image.alt = piece.title;
+  image.onload = syncDrawerRelatedHeight;
   title.textContent = piece.title;
   count.textContent = `${drawerState.galleryIndex + 1} / ${project.pieces.length}`;
   if (fullscreen && $("#projectDrawer")?.classList.contains("is-gallery-fullscreen")) {
@@ -917,6 +949,7 @@ function setDrawerGalleryIndex(index) {
     inline: "center",
     block: "nearest",
   });
+  syncDrawerRelatedHeight();
 }
 
 function setPageGalleryIndex(index) {
@@ -1228,6 +1261,7 @@ function init() {
     initHeroSlider();
     initGsapMotion();
   }, { once: true });
+  window.addEventListener("resize", syncDrawerRelatedHeight);
 }
 
 init();

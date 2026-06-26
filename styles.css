@@ -4354,3 +4354,887 @@ body[data-page="home"]::before {
     padding-bottom: 1.5rem;
   }
 }
+
+/* Desktop drawer layout: editorial viewer with main media + side playlist. */
+@media (min-width: 980px) {
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-panel {
+    width: min(96vw, 118rem);
+    background:
+      radial-gradient(circle at 26% 12%, rgba(139, 92, 246, 0.14), transparent 34rem),
+      rgba(5, 5, 7, 0.985);
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body {
+    height: 100%;
+    display: block;
+    padding: clamp(1.4rem, 2.6vw, 3rem);
+    overflow: auto;
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-feature,
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-feature,
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.has-related:not(.is-gallery-drawer) .drawer-feature,
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-single .drawer-feature {
+    width: min(100%, 112rem);
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: clamp(1rem, 1.6vw, 1.55rem);
+    align-items: start;
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-heading,
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-heading {
+    width: min(32rem, 100%);
+    max-width: 32rem;
+    align-self: start;
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-heading h2,
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-heading h2 {
+    font-size: clamp(2.6rem, 5.2vw, 6rem);
+    letter-spacing: -0.045em;
+  }
+
+  .drawer-context {
+    width: min(82rem, 100%);
+    display: grid;
+    grid-template-columns: minmax(24rem, 0.52fr) minmax(20rem, 0.48fr);
+    gap: clamp(0.8rem, 1.3vw, 1.2rem);
+    align-items: stretch;
+  }
+
+  .drawer-context .drawer-role,
+  .drawer-brief {
+    margin: 0;
+    min-height: 100%;
+    border: 1px solid rgba(139, 92, 246, 0.2);
+    border-radius: 8px;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.12), rgba(7, 7, 10, 0.76));
+  }
+
+  .drawer-brief {
+    display: flex;
+    align-items: center;
+    padding: clamp(0.9rem, 1.3vw, 1.15rem);
+    color: var(--soft);
+    font-size: clamp(0.98rem, 1.1vw, 1.15rem);
+    line-height: 1.42;
+  }
+
+  .drawer-stage {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) clamp(16rem, 24vw, 27rem);
+    gap: clamp(1.1rem, 2vw, 2rem);
+    align-items: start;
+  }
+
+  .drawer-body.is-single .drawer-stage {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: min(76rem, 100%);
+  }
+
+  .drawer-stage .drawer-media,
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-media {
+    min-width: 0;
+    align-self: start;
+  }
+
+  .drawer-video-frame {
+    min-height: 0;
+    border-radius: 14px;
+  }
+
+  .drawer-stage .drawer-related,
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-related,
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.has-related:not(.is-gallery-drawer) .drawer-related {
+    width: 100%;
+    max-width: none;
+    min-height: 0;
+    max-height: min(56rem, calc(100vh - 18rem));
+    margin: 0;
+    overflow: auto;
+    padding: 0 0.2rem 0.4rem 0;
+  }
+
+  .drawer-pieces {
+    grid-template-columns: 1fr;
+    gap: clamp(0.85rem, 1.2vw, 1.15rem);
+  }
+
+  .drawer-piece {
+    border-radius: 10px;
+    padding: 0.55rem;
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  .drawer-piece-image {
+    border-radius: 8px;
+  }
+
+  .drawer-body.is-gallery-drawer .drawer-carousel,
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-carousel {
+    height: auto;
+    max-height: none;
+    grid-template-columns: 3rem minmax(0, 1fr) 3rem;
+  }
+
+  .drawer-body.is-gallery-drawer .drawer-carousel .carousel-frame,
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-carousel .carousel-frame {
+    height: auto;
+    min-height: 0;
+  }
+
+  .drawer-body.is-gallery-drawer .carousel-image,
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-carousel .carousel-image {
+    height: clamp(30rem, 58vh, 46rem);
+    object-fit: contain;
+    background: rgba(3, 3, 5, 0.92);
+  }
+
+  .drawer-thumb-strip,
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-thumb-strip {
+    display: grid;
+    grid-auto-flow: row;
+    grid-auto-columns: unset;
+    grid-template-columns: 1fr;
+    gap: clamp(0.85rem, 1.2vw, 1.15rem);
+    max-width: none;
+    width: 100%;
+    margin: 0;
+    padding: 0 0.2rem 0.4rem 0;
+    overflow: visible;
+    scroll-snap-type: none;
+  }
+
+  .drawer-thumb {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 979px) {
+  .drawer-context,
+  .drawer-stage {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .drawer-brief {
+    margin: 0;
+    color: var(--soft);
+    line-height: 1.45;
+  }
+}
+
+/* Work heading alignment: left-led, compact and consistent with the reference. */
+.work-heading {
+  grid-template-columns: 1fr;
+  max-width: min(78rem, 100%);
+  gap: 0.9rem;
+  align-items: start;
+  margin-bottom: 1.45rem;
+}
+
+.work-heading > p {
+  max-width: 58rem;
+}
+
+.work-filters {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+@media (min-width: 980px) {
+  .work-heading h2 {
+    max-width: none;
+  }
+}
+
+/* Desktop drawer height lock: the detail view must fit the viewport. */
+@media (min-width: 980px) {
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-panel {
+    height: 100dvh;
+    overflow: hidden;
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-close {
+    position: absolute;
+    top: 0.85rem;
+    right: 0.85rem;
+    z-index: 4;
+    margin: 0;
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body {
+    height: 100%;
+    padding: clamp(1.15rem, 2vw, 2rem);
+    padding-top: clamp(1.7rem, 3.2vw, 3rem);
+    overflow: hidden;
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-feature,
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-feature,
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.has-related:not(.is-gallery-drawer) .drawer-feature,
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-single .drawer-feature {
+    height: 100%;
+    min-height: 0;
+    grid-template-rows: auto auto minmax(0, 1fr);
+    gap: clamp(0.75rem, 1.1vw, 1.05rem);
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-heading {
+    width: min(28rem, 100%);
+    max-width: 28rem;
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-heading h2,
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-heading h2 {
+    font-size: clamp(2.1rem, 3.8vw, 4.7rem);
+    line-height: 0.94;
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-heading .eyebrow {
+    font-size: 0.66rem;
+  }
+
+  .drawer-context {
+    width: min(76rem, calc(100% - 2.8rem));
+    grid-template-columns: minmax(22rem, 0.52fr) minmax(20rem, 0.48fr);
+    gap: 0.8rem;
+  }
+
+  .drawer-context .drawer-role {
+    padding: 0.7rem 0.8rem;
+  }
+
+  .drawer-role-list {
+    gap: 0.38rem;
+  }
+
+  .drawer-role .drawer-role-chip {
+    min-height: 1.85rem;
+    padding: 0.34rem 0.58rem 0.34rem 0.38rem;
+    font-size: 0.68rem;
+  }
+
+  .drawer-role-icon {
+    width: 1rem;
+    height: 1rem;
+    font-size: 0.62rem;
+  }
+
+  .drawer-brief {
+    padding: 0.72rem 0.9rem;
+    font-size: clamp(0.88rem, 0.92vw, 1rem);
+    line-height: 1.35;
+  }
+
+  .drawer-stage {
+    min-height: 0;
+    height: 100%;
+    grid-template-columns: minmax(0, 1fr) clamp(14rem, 22vw, 25rem);
+    gap: clamp(0.9rem, 1.5vw, 1.35rem);
+    align-items: stretch;
+  }
+
+  .drawer-body.is-single .drawer-stage {
+    height: 100%;
+    max-width: min(78rem, 100%);
+  }
+
+  .drawer-stage .drawer-media,
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-media {
+    height: 100%;
+    min-height: 0;
+    display: grid;
+    align-items: stretch;
+  }
+
+  .drawer-video-frame {
+    height: 100%;
+    min-height: 0;
+    max-height: 100%;
+  }
+
+  .drawer-video-frame iframe,
+  .drawer-video-poster {
+    height: 100%;
+  }
+
+  .drawer-piece-meta {
+    margin-top: 0.55rem;
+  }
+
+  .drawer-stage .drawer-related,
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-related,
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.has-related:not(.is-gallery-drawer) .drawer-related {
+    height: 100%;
+    max-height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .drawer-body.is-single .drawer-related:empty {
+    display: none;
+  }
+
+  .drawer-pieces,
+  .drawer-thumb-strip,
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-thumb-strip {
+    align-content: start;
+  }
+
+  .drawer-piece,
+  .drawer-thumb {
+    flex: 0 0 auto;
+  }
+
+  .drawer-piece span,
+  .drawer-thumb span {
+    font-size: 0.72rem;
+  }
+
+  .drawer-body.is-gallery-drawer .drawer-carousel,
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-carousel {
+    height: 100%;
+    min-height: 0;
+    grid-template-rows: minmax(0, 1fr) auto;
+  }
+
+  .drawer-body.is-gallery-drawer .drawer-carousel .carousel-frame,
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-carousel .carousel-frame {
+    height: 100%;
+    min-height: 0;
+  }
+
+  .drawer-body.is-gallery-drawer .carousel-image,
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-carousel .carousel-image {
+    height: 100%;
+    max-height: 100%;
+  }
+}
+
+/* Drawer width should follow the media scale, not fill the whole viewport. */
+@media (min-width: 980px) {
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-panel {
+    width: min(88vw, 94rem);
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-feature,
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-feature,
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.has-related:not(.is-gallery-drawer) .drawer-feature,
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-single .drawer-feature {
+    width: min(100%, 88rem);
+  }
+
+  .drawer-context {
+    width: min(62rem, 100%);
+    grid-template-columns: minmax(18rem, 0.52fr) minmax(18rem, 0.48fr);
+  }
+
+  .drawer-stage {
+    width: fit-content;
+    max-width: 100%;
+    grid-template-columns: minmax(36rem, min(62vw, 68rem)) clamp(12.5rem, 18vw, 20rem);
+    justify-content: start;
+  }
+
+  .drawer-body.is-single .drawer-stage {
+    width: min(68rem, 100%);
+    max-width: min(68rem, 100%);
+  }
+
+  .drawer-video-frame {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    align-self: start;
+  }
+
+  .drawer-stage .drawer-related,
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-related,
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.has-related:not(.is-gallery-drawer) .drawer-related {
+    height: auto;
+    max-height: var(--drawer-media-height, 38.25rem);
+  }
+
+  .drawer-body.is-gallery-drawer .drawer-carousel,
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-carousel {
+    height: auto;
+  }
+
+  .drawer-body.is-gallery-drawer .drawer-carousel .carousel-frame,
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-carousel .carousel-frame {
+    height: auto;
+  }
+
+  .drawer-body.is-gallery-drawer .carousel-image,
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-carousel .carousel-image {
+    height: auto;
+    max-height: min(58vh, 38rem);
+  }
+}
+
+/* Cleaner desktop drawer: information follows the media width. */
+@media (min-width: 980px) {
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-feature,
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-feature,
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.has-related:not(.is-gallery-drawer) .drawer-feature,
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-single .drawer-feature {
+    width: fit-content;
+    max-width: 100%;
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-heading,
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-heading {
+    width: min(100%, 68rem);
+    max-width: none;
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-heading h2,
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-heading h2 {
+    width: max-content;
+    max-width: 100%;
+    white-space: nowrap;
+    font-size: clamp(2.1rem, 3.4vw, 4.35rem);
+  }
+
+  .drawer-context {
+    width: min(68rem, 100%);
+    display: grid;
+    grid-template-columns: minmax(0, auto) minmax(18rem, 1fr);
+    gap: clamp(0.9rem, 1.4vw, 1.4rem);
+    align-items: end;
+  }
+
+  .drawer-context .drawer-role,
+  .drawer-brief {
+    min-height: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+  }
+
+  .drawer-context .drawer-role {
+    padding: 0;
+  }
+
+  .drawer-brief {
+    display: block;
+    padding: 0;
+    max-width: 34rem;
+  }
+
+  .drawer-body.is-single .drawer-stage {
+    width: min(68rem, 100%);
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-single {
+    display: grid;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 980px) and (max-width: 1320px) {
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-heading h2,
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-heading h2 {
+    white-space: normal;
+  }
+}
+
+/* Single-piece drawers should wrap the media instead of keeping playlist width. */
+@media (min-width: 980px) {
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-panel:has(.drawer-body.is-single) {
+    width: min(78vw, 74rem);
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-panel:has(.drawer-body.is-gallery-drawer) {
+    width: min(92vw, 94rem);
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-single {
+    padding-inline: clamp(1.15rem, 2vw, 2rem);
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-single .drawer-feature {
+    width: min(68rem, 100%);
+    margin-inline: auto;
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-single .drawer-heading,
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-single .drawer-context,
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-single .drawer-stage {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Gallery drawers keep a clean image carousel layout, independent from video sizing. */
+@media (min-width: 980px) {
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer {
+    display: block;
+    overflow: hidden;
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-feature {
+    width: min(100%, 88rem);
+    height: 100%;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) clamp(12.5rem, 18vw, 20rem);
+    grid-template-rows: auto auto minmax(0, 1fr);
+    gap: clamp(0.75rem, 1.1vw, 1rem) clamp(0.9rem, 1.5vw, 1.35rem);
+    align-items: start;
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-heading,
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-context {
+    grid-column: 1 / -1;
+    width: min(68rem, 100%);
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-stage {
+    grid-column: 1 / -1;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) clamp(12.5rem, 18vw, 20rem);
+    gap: clamp(0.9rem, 1.5vw, 1.35rem);
+    align-items: stretch;
+    max-width: none;
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-media {
+    height: 100%;
+    min-height: 0;
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-carousel {
+    height: 100%;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: 2.6rem minmax(0, 1fr) 2.6rem;
+    grid-template-rows: minmax(0, 1fr) auto;
+    align-items: center;
+    max-height: none;
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-carousel .carousel-frame {
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) auto;
+    align-self: stretch;
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-carousel .carousel-image {
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    object-fit: contain;
+    object-position: center center;
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-carousel .carousel-fullscreen {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: center;
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-related {
+    height: 100%;
+    max-height: var(--drawer-media-height, 36rem);
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-thumb-strip {
+    display: grid;
+    grid-auto-flow: row;
+    grid-auto-columns: unset;
+    grid-template-columns: 1fr;
+    gap: clamp(0.75rem, 1vw, 1rem);
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0 0.2rem 0.4rem 0;
+    overflow: visible;
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-thumb {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-gallery-feature,
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-gallery-tools,
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .gallery-grid {
+    display: none !important;
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .carousel-frame figcaption {
+    min-height: 2.25rem;
+  }
+}
+
+/* Final gallery hard reset: placed last so galleries and fullscreen stay stable. */
+@media (min-width: 980px) {
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-panel:has(.drawer-body.is-gallery-drawer) {
+    width: min(94vw, 104rem) !important;
+    height: 100dvh !important;
+    overflow: hidden !important;
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer {
+    height: 100% !important;
+    min-height: 0 !important;
+    display: block !important;
+    padding: clamp(1.1rem, 1.8vw, 1.8rem) !important;
+    padding-top: clamp(1.7rem, 3vw, 2.6rem) !important;
+    overflow: hidden !important;
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-feature {
+    width: min(100%, calc(var(--drawer-gallery-stage-width, 62rem) + clamp(13rem, 18vw, 20rem) + clamp(0.85rem, 1.4vw, 1.25rem))) !important;
+    height: 100% !important;
+    min-height: 0 !important;
+    margin-inline: auto !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto auto minmax(0, 1fr) !important;
+    gap: clamp(0.7rem, 1vw, 1rem) !important;
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-heading,
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-context {
+    width: min(100%, calc(var(--drawer-gallery-stage-width, 62rem) + clamp(13rem, 18vw, 20rem) + clamp(0.85rem, 1.4vw, 1.25rem))) !important;
+    max-width: 100% !important;
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-stage {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 100% !important;
+    min-height: 0 !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, var(--drawer-gallery-stage-width, 62rem)) clamp(13rem, 18vw, 20rem) !important;
+    gap: clamp(0.85rem, 1.4vw, 1.25rem) !important;
+    align-items: stretch !important;
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-media {
+    height: 100% !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-carousel {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    display: grid !important;
+    grid-template-columns: 2.6rem minmax(0, 1fr) 2.6rem !important;
+    grid-template-rows: minmax(0, 1fr) auto !important;
+    gap: 0.55rem !important;
+    align-items: center !important;
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-carousel .carousel-frame {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    width: min(100%, var(--drawer-gallery-width, 58rem)) !important;
+    height: 100% !important;
+    min-height: 0 !important;
+    display: grid !important;
+    grid-template-rows: minmax(0, 1fr) auto !important;
+    justify-self: center !important;
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-carousel .carousel-image {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+    background: rgba(3, 3, 5, 0.92) !important;
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-carousel .carousel-fullscreen {
+    grid-column: 2 !important;
+    grid-row: 2 !important;
+    justify-self: center !important;
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-related {
+    height: var(--drawer-media-height, 32rem) !important;
+    max-height: 100% !important;
+    min-height: 0 !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+  }
+}
+
+.project-drawer.is-gallery-fullscreen .drawer-panel {
+  width: 100vw !important;
+  height: 100dvh !important;
+  inset: 0 !important;
+  border-left: 0 !important;
+  background: rgba(4, 4, 7, 0.985) !important;
+  overflow: hidden !important;
+}
+
+.project-drawer.is-gallery-fullscreen .drawer-body.is-gallery-drawer {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
+.project-drawer.is-gallery-fullscreen .drawer-heading,
+.project-drawer.is-gallery-fullscreen .drawer-context,
+.project-drawer.is-gallery-fullscreen .drawer-related {
+  display: none !important;
+}
+
+.project-drawer.is-gallery-fullscreen .drawer-feature,
+.project-drawer.is-gallery-fullscreen .drawer-stage,
+.project-drawer.is-gallery-fullscreen .drawer-media,
+.project-drawer.is-gallery-fullscreen .drawer-carousel {
+  position: fixed !important;
+  inset: 0 !important;
+  width: 100vw !important;
+  height: 100dvh !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  display: grid !important;
+}
+
+.project-drawer.is-gallery-fullscreen .drawer-carousel {
+  grid-template-columns: 3.5rem minmax(0, 1fr) 3.5rem !important;
+  grid-template-rows: minmax(0, 1fr) auto !important;
+  gap: 0.6rem !important;
+  align-items: center !important;
+  padding: clamp(0.8rem, 1.6vw, 1.4rem) !important;
+  background: rgba(4, 4, 7, 0.985) !important;
+}
+
+.project-drawer.is-gallery-fullscreen .drawer-carousel .carousel-frame {
+  grid-column: 2 !important;
+  grid-row: 1 !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  display: grid !important;
+  grid-template-rows: minmax(0, 1fr) auto !important;
+}
+
+.project-drawer.is-gallery-fullscreen .drawer-carousel .carousel-image {
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+}
+
+.project-drawer.is-gallery-fullscreen .drawer-carousel .carousel-fullscreen {
+  grid-column: 2 !important;
+  grid-row: 2 !important;
+  justify-self: center !important;
+}
+
+.project-drawer.is-gallery-fullscreen .drawer-carousel .carousel-nav {
+  position: static !important;
+  transform: none !important;
+  align-self: center !important;
+}
+
+/* Gallery drawer final simplification: one aligned viewer + side thumbnails. */
+@media (min-width: 980px) {
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-panel:has(.drawer-body.is-gallery-drawer) {
+    width: min(88vw, 88rem) !important;
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer {
+    padding: clamp(1rem, 1.6vw, 1.55rem) !important;
+    padding-top: clamp(1.65rem, 2.6vw, 2.35rem) !important;
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-feature {
+    width: min(100%, 76rem) !important;
+    grid-template-rows: auto auto minmax(0, 1fr) !important;
+    gap: clamp(0.65rem, 0.95vw, 0.9rem) !important;
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-heading,
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-context,
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-stage {
+    width: 100% !important;
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-stage {
+    height: min(62vh, calc(100dvh - 18rem)) !important;
+    min-height: 26rem !important;
+    grid-template-columns: minmax(0, 1fr) clamp(12rem, 17vw, 17rem) !important;
+    gap: clamp(0.8rem, 1.2vw, 1.1rem) !important;
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-carousel {
+    position: relative !important;
+    height: 100% !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    grid-template-rows: minmax(0, 1fr) auto !important;
+    gap: 0.45rem !important;
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-carousel .carousel-frame {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    width: 100% !important;
+    height: 100% !important;
+    justify-self: stretch !important;
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-carousel .carousel-image {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-carousel .carousel-nav {
+    position: absolute !important;
+    top: 50% !important;
+    z-index: 3 !important;
+    transform: translateY(-50%) !important;
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-carousel .carousel-nav-prev {
+    left: 0.65rem !important;
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-carousel .carousel-nav-next {
+    right: 0.65rem !important;
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-carousel .carousel-fullscreen {
+    grid-column: 1 !important;
+    grid-row: 2 !important;
+  }
+
+  .project-drawer:not(.is-gallery-fullscreen) .drawer-body.is-gallery-drawer .drawer-related {
+    height: 100% !important;
+    max-height: 100% !important;
+  }
+}
