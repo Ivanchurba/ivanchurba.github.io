@@ -428,23 +428,30 @@ function moveReel(direction) {
   pauseHeroSlider("temporary");
   const gap = parseFloat(getComputedStyle(set).gap || "0");
   const distance = card.getBoundingClientRect().width + gap;
-  if (direction < 0 && reelState.loopWidth && viewport.scrollLeft < distance) {
+  if (direction < 0 && reelState.loopWidth && viewport.scrollLeft <= reelState.loopWidth + distance) {
     viewport.scrollLeft += reelState.loopWidth;
   }
   viewport.scrollBy({ left: direction * distance, behavior: "smooth" });
+  window.setTimeout(normalizeHeroSliderScroll, 460);
   scheduleReelResume();
 }
 
 function startReelAutoplay() {
   setupInfiniteReel();
   if (reelState.timer || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-  reelState.timer = window.setInterval(() => {
-    if (isReelPaused() || document.hidden) return;
+  let lastTime = 0;
+  const step = (time) => {
+    if (!lastTime) lastTime = time;
+    const delta = Math.min(time - lastTime, 40);
+    lastTime = time;
     const viewport = $(".montage-viewport");
-    if (!viewport) return;
-    viewport.scrollLeft += 1.35;
-    normalizeHeroSliderScroll();
-  }, 24);
+    if (viewport && !isReelPaused() && !document.hidden) {
+      viewport.scrollLeft += delta * 0.056;
+      normalizeHeroSliderScroll();
+    }
+    reelState.timer = window.requestAnimationFrame(step);
+  };
+  reelState.timer = window.requestAnimationFrame(step);
 }
 
 function initHeroSlider() {
@@ -475,9 +482,9 @@ function normalizeHeroSliderScroll() {
   const viewport = $(".montage-viewport");
   if (!viewport || !reelState.loopWidth) return;
   const loopWidth = reelState.loopWidth;
-  if (viewport.scrollLeft >= loopWidth) {
+  if (viewport.scrollLeft >= loopWidth * 2) {
     viewport.scrollLeft -= loopWidth;
-  } else if (viewport.scrollLeft < 0) {
+  } else if (viewport.scrollLeft < loopWidth) {
     viewport.scrollLeft += loopWidth;
   }
 }
@@ -501,12 +508,16 @@ function setupInfiniteReel() {
     strip.append(clone);
   }
 
-  const firstSet = $(".montage-set", strip);
-  reelState.loopWidth = firstSet?.scrollWidth || 0;
+  const currentSets = $$(".montage-set", strip);
+  const firstSet = currentSets[0];
+  const secondSet = currentSets[1];
+  reelState.loopWidth = firstSet && secondSet
+    ? secondSet.offsetLeft - firstSet.offsetLeft
+    : firstSet?.scrollWidth || 0;
   if (!reelState.loopWidth) return;
 
   if (!reelState.loopReady) {
-    viewport.scrollLeft = 0;
+    viewport.scrollLeft = reelState.loopWidth;
     reelState.loopReady = true;
     let ticking = false;
     viewport.addEventListener("scroll", () => {
@@ -994,6 +1005,9 @@ function bindInteractions() {
       showAllProjects = false;
       renderWorkFilters();
       transitionWorkGrid(renderWorkGrid);
+      window.requestAnimationFrame(() => {
+        $("#work")?.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
       return;
     }
 

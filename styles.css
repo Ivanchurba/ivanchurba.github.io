@@ -3738,6 +3738,27 @@ body[data-page="home"]::before {
   transform-style: flat;
 }
 
+.hero-montage.is-marquee .montage-track::before,
+.hero-montage.is-marquee .montage-track::after {
+  content: "";
+  position: absolute;
+  top: clamp(1rem, 2.6vw, 2rem);
+  bottom: 4.75rem;
+  z-index: 8;
+  width: clamp(2.5rem, 6vw, 6.5rem);
+  pointer-events: none;
+}
+
+.hero-montage.is-marquee .montage-track::before {
+  left: 0;
+  background: linear-gradient(90deg, rgba(7, 7, 10, 0.72), rgba(7, 7, 10, 0));
+}
+
+.hero-montage.is-marquee .montage-track::after {
+  right: 0;
+  background: linear-gradient(270deg, rgba(7, 7, 10, 0.72), rgba(7, 7, 10, 0));
+}
+
 .hero-montage.is-marquee .montage-viewport {
   position: absolute;
   inset: clamp(1rem, 2.6vw, 2rem) 0 4.75rem;
@@ -3746,7 +3767,7 @@ body[data-page="home"]::before {
   min-height: 0;
   overflow-x: auto;
   overflow-y: hidden;
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
   scroll-snap-type: none;
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
@@ -4062,14 +4083,6 @@ body[data-page="home"]::before {
   letter-spacing: 0;
   line-height: 1.1;
   text-transform: none;
-  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease, box-shadow 180ms ease;
-}
-
-.drawer-role .drawer-role-chip:hover {
-  transform: translateY(-2px);
-  border-color: rgba(139, 92, 246, 0.55);
-  background: rgba(139, 92, 246, 0.13);
-  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.22), 0 0 22px rgba(139, 92, 246, 0.14);
 }
 
 .drawer-role-icon {
